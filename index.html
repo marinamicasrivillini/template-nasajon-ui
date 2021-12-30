@@ -45,7 +45,70 @@
                 auto-play-timer="5000"
                 slide-height="500">
             </nsj-carousel> -->
-
+            <div class="form-group">
+                <textarea ng-model="nsjCount" ng-trim="false" maxlength="200" class="form-control"></textarea>
+                <nsj-char-count ng-prop-count="nsjCount.length"></nsj-char-count>
+            </div>
+            <!-- <nsj-interval
+                ng-model="myinterval"
+                seconds="true"
+            ></nsj-interval> -->
+            <nsj-label class="label-success" content="Ativo" tooltip="Ativo"></nsj-label>
+            <!-- <nsj-list-group 
+                ng-model="listGroupTest"
+                on-add="add()"
+                on-remove="remove()"
+            ></nsj-list-group> -->
+            <div class="form-group has-success has-feedback nsj-feedback">
+                <label class="control-label">Input com sucesso:</label>
+                <input type="text" class="form-control">
+                <i class="form-control-feedback"></i>
+                <span class="sr-only">(sucesso)</span>
+                <span class="help-block-custom">Texto de sucesso não obrigatório.</span>
+            </div>
+            <div class="custom-radio radio radio-inline">
+                <label>
+                    <input type="radio">
+                    <span class="checkmark"></span>
+                    Custom radio 1
+                </label>
+            </div>
+            <div class="custom-radio radio radio-inline">
+                <label>
+                    <input type="radio">
+                    <span class="checkmark"></span>
+                    Custom radio 2
+                </label>
+            </div>
+            <div class="custom-radio radio radio-inline">
+                <label>
+                    <input type="radio">
+                    <span class="checkmark"></span>
+                    Custom radio 3
+                </label>
+            </div>
+            <div class="nsj-color-card bg-color-1">
+                <div class="card-content">
+                    <div class="icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <div class="text">
+                        <p title="AFASTAMENTOS">
+                            AFASTAMENTOS
+                        </p>
+                        <span class="value">
+                            6
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <nsj-button ng-click="myType = 'currency'" color="default">currency</nsj-button>
+            <nsj-button ng-click="myType = 'number'" color="default">number</nsj-button>
+            <nsj-button ng-click="myType = 'interval'" color="default">interval</nsj-button>
+            <div class="top-buffer">
+                <dynamic-input ng-model="myinput" dynamic-input="myType" ></dynamic-input>
+            </div>
        </div>
    </body>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.js"></script>
