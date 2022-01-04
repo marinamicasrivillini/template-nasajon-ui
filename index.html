@@ -2,126 +2,240 @@
 <html lang="pt-br">
    <head>
        <meta charset="utf-8"/>
-       <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/static.nasajon/css/bootstrap.css" />
-       <link rel="preconnect" href="https://fonts.gstatic.com">
-       <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-       <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/static.nasajon/lib/font-awesome/4.4.0/font-awesome.min.css">
-       <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/static.nasajon/lib/elusive-icons/2.0.0/elusive-icons.min.css">
-       <link rel="stylesheet" type="text/css" href="css/nasajon-theme-v1.268.min.css">
-       <link rel="stylesheet" type="text/css" href="css/nasajon-ui-v1.268.min.css">
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+       <link rel="stylesheet" type="text/css" href="css/estilos.css">
        <title>Template do Nasajon-UI</title>
    </head>
-   <body ng-app="main">
-       <div ng-controller="IndexController">
-            <p>Olá mundo!</p>
-            
-            <nsj-checkbox><i class="fas fa-trash-alt"></i> Excluir</nsj-checkbox>
-            <nsj-table fields="fields" fields-config="fieldsConfig" config-page="configPage" has-more-page="hasMorePage()">
-            </nsj-table>
-            <nsj-button-dropdown color="primary" label="Teste Dropdown">
-                <item-dropdown item-label="Action" ui-sref="javascript://"></item-dropdown> 
-            </nsj-button-dropdown>
-            <br />
-            <nsj-accordion  headline="Accordion de exemplo" sub-title="Título secundário"> 
-                <nsj-button slot="right" color="default">Botão de ação</nsj-button>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
-                </p>
-            </nsj-accordion>
-            <nsj-button btn-style="primary"> 
-                Notificações <nsj-badge value="6"></nsj-badge>
-            </nsj-button>
-            <nsj-progress-bar now="20" min-value="0" max-value="100"  label="Concluído">
-            </nsj-progress-bar>
-            <nsj-button-group> 
-                <nsj-button color="default">Left</nsj-button>
-                <nsj-button color="default">Middle</nsj-button>
-                <nsj-button color="default">Right</nsj-button>
-            </nsj-button-group>
-            <!-- <nsj-carousel 
-                ng-prop-slide="imagesCarousel" 
-                auto-play="true" 
-                auto-play-timer="5000"
-                slide-height="500">
-            </nsj-carousel> -->
-            <div class="form-group">
-                <textarea ng-model="nsjCount" ng-trim="false" maxlength="200" class="form-control"></textarea>
-                <nsj-char-count ng-prop-count="nsjCount.length"></nsj-char-count>
-            </div>
-            <!-- <nsj-interval
-                ng-model="myinterval"
-                seconds="true"
-            ></nsj-interval> -->
-            <nsj-label class="label-success" content="Ativo" tooltip="Ativo"></nsj-label>
-            <!-- <nsj-list-group 
-                ng-model="listGroupTest"
-                on-add="add()"
-                on-remove="remove()"
-            ></nsj-list-group> -->
-            <div class="form-group has-success has-feedback nsj-feedback">
-                <label class="control-label">Input com sucesso:</label>
-                <input type="text" class="form-control">
-                <i class="form-control-feedback"></i>
-                <span class="sr-only">(sucesso)</span>
-                <span class="help-block-custom">Texto de sucesso não obrigatório.</span>
-            </div>
-            <div class="custom-radio radio radio-inline">
-                <label>
-                    <input type="radio">
-                    <span class="checkmark"></span>
-                    Custom radio 1
-                </label>
-            </div>
-            <div class="custom-radio radio radio-inline">
-                <label>
-                    <input type="radio">
-                    <span class="checkmark"></span>
-                    Custom radio 2
-                </label>
-            </div>
-            <div class="custom-radio radio radio-inline">
-                <label>
-                    <input type="radio">
-                    <span class="checkmark"></span>
-                    Custom radio 3
-                </label>
-            </div>
-            <div class="nsj-color-card bg-color-1">
-                <div class="card-content">
-                    <div class="icon">
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <div class="text">
-                        <p title="AFASTAMENTOS">
-                            AFASTAMENTOS
-                        </p>
-                        <span class="value">
-                            6
-                        </span>
-                    </div>
-                </div>
-            </div>
-            
-            <nsj-button ng-click="myType = 'currency'" color="default">currency</nsj-button>
-            <nsj-button ng-click="myType = 'number'" color="default">number</nsj-button>
-            <nsj-button ng-click="myType = 'interval'" color="default">interval</nsj-button>
-            <div class="top-buffer">
-                <dynamic-input ng-model="myinput" dynamic-input="myType" ></dynamic-input>
-            </div>
-       </div>
+
+   <body>
+    <table class="demo">
+        <caption>Tabela de sistemas e suas versões do Nasajon-UI</caption>
+        <thead>
+            <tr>
+                <th>Sistemas</th>
+                <th>Versões</th>
+                <th>Componentes no Nasajon-UI de Versões</th>
+                <th>Situação do sistema</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Painel do Cliente</td>
+                <td>v1.268</td>
+                <td><a href="versoes-nasajon-ui/v1-268/componentes.html">Ver componentes em códigos</a></td>
+                <td>Em uso</td>
+            </tr>
+            <tr>
+                <td>Adminv3</td>
+                <td>v1.118</td>
+                <td>Ver componentes em códigos</td>
+                <td>Em uso</td>
+            </tr>
+            <tr>
+                <td>Adminv2</td>
+                <td>v0.61</td>
+                <td>Ver componentes em códigos</td>
+                <td>Em uso</td>
+            </tr>
+            <tr>
+                <td>Diretório</td>
+                <td>v0.85</td>
+                <td>Ver componentes em códigos</td>
+                <td>Em uso</td>
+            </tr>
+            <tr>
+                <td>Conta Nasajon</td>
+                <td>não usa nasajon UI</td>
+                <td>não usa nasajon UI</td>
+                <td>Em uso, a substituir pelo Keycloak</td>
+            </tr>
+            <tr>
+                <td>Portal do Funcionário</td>
+                <td>v1.118</td>
+                <td>Ver componentes em códigos</td>
+                <td>Em uso</td>
+            </tr>
+            <tr>
+                <td>Avaliação de Desempenho</td>
+                <td>não usa nasajon UI</td>
+                <td>não usa nasajon UI</td>
+                <td>Em uso</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        <tbody>
+    </table>
    </body>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.2/angular-animate.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js" integrity="sha512-JkCv2gG5E746DSy2JQlYUJUcw9mT0vyre2KxE2ZuDjNfqG90Bi7GhcHUjLQ2VIAF1QVsY5JMwA1+bjjU5Omabw==" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.19.8/select.min.js" integrity="sha512-IO99nu6TitXdydITTnjerPUo0HffdgLC9yIfv5gwglcsSR7nN008a7QDynI5Ih0mGLlnNnt8tGIuBCFRZaNjqw==" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.28/angular-ui-router.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
-   <script src="https://s3-us-west-2.amazonaws.com/static.nasajon/lib/angular-ui-mask/1.8.7/mask.js"></script>
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-   <script src="lib/ui-bootstrap.min.js"></script>
-   <script src="lib/nasajon-ui-v1.280.min.js"></script>
-   <script src="lib/app.js"></script>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
 </html>

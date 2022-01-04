@@ -1,0 +1,29 @@
+body { 
+    margin: 30px !important;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+
+html {
+    background: #FFF !important;
+}
+
+.demo {
+    border:1px solid #C0C0C0;
+    border-collapse:collapse;
+    padding:5px;
+}
+.demo th {
+    border:1px solid #C0C0C0;
+    padding:5px;
+    background:#F0F0F0;
+}
+.demo td {
+    border:1px solid #C0C0C0;
+    padding:5px;
+}
+
+caption { 
+    margin-bottom: 20px;
+    color: #00469B;
+}
