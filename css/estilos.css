@@ -14,13 +14,14 @@ html {
     padding:5px;
 }
 .demo th {
-    border:1px solid #C0C0C0;
+    border:1px solid #5a5a5a;
     padding:5px;
-    background:#F0F0F0;
+    background:#5a5a5a;
+    color: #FFF;
 }
 .demo td {
     border:1px solid #C0C0C0;
-    padding:5px;
+    padding:10px;
 }
 
 caption { 
